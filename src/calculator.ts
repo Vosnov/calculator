@@ -3,7 +3,8 @@ export class Operator {
     public symbol: string,
     public displaySymbol: string,
     public calc: (value1: number, value2: number) => number,
-    public priorityLevel = 0
+    public priorityLevel = 0,
+    public isMultiple = false
   ) {
   }
 }
@@ -12,7 +13,7 @@ export const plus = new Operator('+', '+', (v1, v2) => v1 + v2)
 export const minus = new Operator('-', '-', (v1, v2) => v1 - v2)
 export const mul = new Operator('*', '×', (v1, v2) => v1 * v2, 1)
 export const div = new Operator('/', '/', (v1, v2) => v1 / v2, 1)
-export const sqrt = new Operator('sqrt', '√', (_, v) => Math.sqrt(v), 2)
+export const sqrt = new Operator('sqrt', '√', (_, v) => Math.sqrt(v), 2, true)
 export const percent = new Operator('%', '%', (v) => v / 100, 1)
 
 class Calculator {

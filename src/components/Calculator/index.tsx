@@ -16,7 +16,7 @@ export const Calculator: FC = () => {
   }, [])
 
   const valueHandler = useCallback((v: string) => {
-    const operators = calculator.operators.map(b => b.displaySymbol)
+    const operators = calculator.operators.filter(o => !o.isMultiple).map(b => b.displaySymbol)
     const lastSymbolIsOperator = operators.includes(value[value.length - 1])
     if (lastSymbolIsOperator && v === value[value.length - 1]){
       return
