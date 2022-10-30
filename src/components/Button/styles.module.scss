@@ -1,0 +1,27 @@
+.wrapper {
+  width: 100px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  font-weight: 500;
+  font-size: 36px;
+  border-radius: 100%;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+}
+
+.primary {
+  background-color: #FFF;
+  color: #2B589A;
+}
