@@ -13,7 +13,7 @@ export const minus = new Operator('-', '-', (v1, v2) => v1 - v2)
 export const mul = new Operator('*', '×', (v1, v2) => v1 * v2, 1)
 export const div = new Operator('/', '/', (v1, v2) => v1 / v2, 1)
 export const sqrt = new Operator('sqrt', '√', (_, v) => Math.sqrt(v), 2)
-export const percent = new Operator('%', '%', (v, _) => v / 100, 1)
+export const percent = new Operator('%', '%', (v) => v / 100, 1)
 
 class Calculator {
   operators = [plus, minus, mul, div, sqrt, percent]
