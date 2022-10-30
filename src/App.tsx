@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import './App.css';
+import './App.scss';
 import { Calculator } from './components/Calculator';
 
 export const App: FC = () => {
